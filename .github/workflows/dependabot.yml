@@ -1,4 +1,4 @@
-name: Dependabot
+name: Dependabot_workflow
 on:
   schedule:
     - cron: '0 0 * * *' # Exécuter tous les jours à minuit
