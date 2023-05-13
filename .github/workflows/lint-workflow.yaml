@@ -4,7 +4,7 @@ on:
   push:
   workflow_dispatch:
 jobs:
-  static_analysis + docker_analysis + super_linter:
+  Lint_workflow:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -18,7 +18,7 @@ jobs:
         uses: hadolint/hadolint@v3.1.0
         with:
           dockerfile: Dockerfile
-          
+
       - name: launching of super-linter
         if: github.event_name == 'pull_request'
         uses: github/super-linter@v4
