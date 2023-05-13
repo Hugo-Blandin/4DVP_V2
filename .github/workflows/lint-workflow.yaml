@@ -18,8 +18,8 @@ jobs:
     steps:
       - name: launching of hadolint
         uses: hadolint/hadolint@v2
-        #with:
-        #  dockerfile: Dockerfile
+        with:
+          dockerfile: Dockerfile
   super_linter:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
