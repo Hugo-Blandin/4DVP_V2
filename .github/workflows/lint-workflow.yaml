@@ -22,7 +22,7 @@ jobs:
           dockerfile: Dockerfile
   super_linter:
     runs-on: ubuntu-latest
-    if: github.event_name == "pull_request"
+    if: github.event_name == 'pull_request'
     steps:
       - name: launching of super-linter
         uses: github/super-linter@v4
