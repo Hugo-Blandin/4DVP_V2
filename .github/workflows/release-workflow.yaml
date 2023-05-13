@@ -28,7 +28,7 @@ jobs:
       - name: Setup go
         uses: actions/setup-go@v4
         with:
-          go-version: "1.17"
+          go-version: stable
 
       - name: Installation of goreleaser
         run: curl -sfL https://install.goreleaser.com/github.com/goreleaser/goreleaser.sh | sh -s -- -b $(go env GOPATH)/bin
@@ -58,4 +58,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ${{ env.DOCKERHUB_USERNAME }}/${{ env.YOUR_REPOSITORY }}:${{ github.ref }}
+          tags: ${{ env.DOCKERHUB_USERNAME }}/${{ env.YOUR_REPOSITORY }}:${{ github.ref_name }}
