@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: launching of hadolint
-        uses: hadolint/hadolint@v3
+        uses: hadolint/hadolint@v3.1.0
         with:
           dockerfile: Dockerfile
   super_linter:
