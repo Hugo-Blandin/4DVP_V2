@@ -37,8 +37,8 @@ jobs:
         uses: goreleaser/goreleaser-action@v4
         with:
           version: ${{ github.ref }}
-          #args: release --rm-dist
-          args: release --clean
+          args: release --rm-dist
+          #args: release --clean
 
       - name: Set up qemu
         uses: docker/setup-qemu-action@v2 
