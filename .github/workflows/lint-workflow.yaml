@@ -16,7 +16,7 @@ jobs:
           config: "p/default"
 
       - name: launching of hadolint
-        uses: hadolint/hadolint@v3
+        uses: hadolint/hadolint@v2.7.0
         with:
           dockerfile: Dockerfile
 
