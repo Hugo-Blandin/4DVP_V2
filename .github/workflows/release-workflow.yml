@@ -37,8 +37,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v4
         with:
           version: latest
-          args: release --rm-dist
-          #args: release --clean
+          args: release --clean
 
       - name: Set up qemu
         uses: docker/setup-qemu-action@v2 
@@ -58,4 +57,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ${{ env.DOCKERHUB_USERNAME }}/${{ env.YOUR_REPOSITORY }}:${{ github.ref_name }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.YOUR_REPOSITORY }}:${{ github.ref_name }}
