@@ -18,7 +18,7 @@ jobs:
       - name: launching of hadolint
         uses: docker://hadolint/hadolint:v2.7.0
         with:
-          entrypoint: /bin/hadolint
+          #entrypoint: /bin/hadolint
           dockerfile: Dockerfile
 
       - name: launching of super-linter
