@@ -9,13 +9,11 @@ updates:
     directory: "/" # Location of package manifests 
     schedule:
       #interval: "daily" test
-      interval: "hour"
-    #allow: 
-    #  - dependency-type: "direct" 
-    #    update-type: "semver:minor" # for allow minor updates
-
+      #interval: "hours"
+      interval: "1 minute"
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       #interval: "daily"
-      interval: "hour"
+      #interval: "hours"
+      interval: "1 minute"

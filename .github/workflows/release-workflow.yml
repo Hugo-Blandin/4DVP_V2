@@ -30,9 +30,6 @@ jobs:
         with:
           go-version: stable
 
-#      - name: Installation of goreleaser
-#        run: curl -sfL https://install.goreleaser.com/github.com/goreleaser/goreleaser.sh | sh -s -- -b $(go env GOPATH)/bin
-      
       - name: Build and release
         uses: goreleaser/goreleaser-action@v4
         with:
