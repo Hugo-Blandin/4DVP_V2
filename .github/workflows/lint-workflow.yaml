@@ -16,8 +16,9 @@ jobs:
           config: "p/default"
 
       - name: launching of hadolint
-        uses: hadolint/hadolint@v2.7.0
+        uses: docker://hadolint/hadolint:v2.7.0
         with:
+          entrypoint: /bin/hadolint
           dockerfile: Dockerfile
 
       - name: launching of super-linter
