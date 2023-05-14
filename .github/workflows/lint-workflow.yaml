@@ -9,14 +9,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        
+
       - name: launching of semgrep
         uses: returntocorp/semgrep-action@v1
         with:
           config: "p/default"
 
       - name: launching of hadolint
-        uses: hadolint/hadolint@v3.1.0
+        uses: hadolint/hadolint@v3
         with:
           dockerfile: Dockerfile
 
